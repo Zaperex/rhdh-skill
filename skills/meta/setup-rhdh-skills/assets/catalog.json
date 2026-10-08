@@ -235,7 +235,8 @@
       "category": "ci",
       "invocation": "model",
       "requiresSkills": [
-        "mutation-gate"
+        "mutation-gate",
+        "rhdh-pr-mr"
       ],
       "requiresExternalSkills": []
     },
@@ -244,7 +245,8 @@
       "category": "ci",
       "invocation": "model",
       "requiresSkills": [
-        "mutation-gate"
+        "mutation-gate",
+        "rhdh-pr-mr"
       ],
       "requiresExternalSkills": []
     },
@@ -284,10 +286,22 @@
       "requiresExternalSkills": []
     },
     {
+      "name": "rhdh-pr-mr",
+      "category": "ci",
+      "invocation": "model",
+      "requiresSkills": [
+        "mutation-gate",
+        "rhdh-jira-link"
+      ],
+      "requiresExternalSkills": []
+    },
+    {
       "name": "rhdh-yarn-bump",
       "category": "ci",
       "invocation": "model",
-      "requiresSkills": [],
+      "requiresSkills": [
+        "rhdh-pr-mr"
+      ],
       "requiresExternalSkills": []
     },
     {
@@ -314,6 +328,17 @@
       "requiresExternalSkills": []
     },
     {
+      "name": "rhdh-release-capacity-plan",
+      "category": "release",
+      "invocation": "model",
+      "requiresSkills": [
+        "rhdh-jira-api",
+        "rhdh-release-teams",
+        "rhdh-release-schedule"
+      ],
+      "requiresExternalSkills": []
+    },
+    {
       "name": "rhdh-release-schedule",
       "category": "release",
       "invocation": "model",
@@ -332,6 +357,27 @@
       "category": "release",
       "invocation": "model",
       "requiresSkills": [],
+      "requiresExternalSkills": []
+    },
+    {
+      "name": "rhdh-release-fixversions",
+      "category": "release",
+      "invocation": "model",
+      "requiresSkills": [
+        "rhdh-jira-api",
+        "rhdh-release-schedule",
+        "mutation-gate"
+      ],
+      "requiresExternalSkills": []
+    },
+    {
+      "name": "rhdh-release-sos",
+      "category": "release",
+      "invocation": "model",
+      "requiresSkills": [
+        "rhdh-release-schedule",
+        "rhdh-release-status"
+      ],
       "requiresExternalSkills": []
     },
     {
